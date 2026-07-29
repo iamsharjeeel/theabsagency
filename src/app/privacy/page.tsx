@@ -21,13 +21,13 @@ export default function PrivacyPage() {
           and deliver related services.
         </p>
         <p>
-          We do not sell your personal information. Form submissions are stored
-          securely via our database provider and accessed only by authorized
-          team members. You may request access or deletion by emailing{" "}
+          We do not sell your personal information. Inquiry details you choose to
+          send via email are used only to respond to your request. You may contact
+          us at{" "}
           <a href={`mailto:${SITE.email}`} className="text-primary underline-offset-2 hover:underline">
             {SITE.email}
-          </a>
-          .
+          </a>{" "}
+          with any privacy questions.
         </p>
         <p>
           This site may use essential cookies and local storage for theme

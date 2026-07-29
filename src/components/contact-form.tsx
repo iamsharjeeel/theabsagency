@@ -61,12 +61,20 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed.data),
       });
-      const data = (await res.json()) as { error?: string; message?: string };
+      const data = (await res.json()) as {
+        error?: string;
+        message?: string;
+        mailto?: string;
+      };
 
       if (!res.ok) {
         setStatus("error");
         setServerMessage(data.error ?? "Something went wrong. Please try again.");
         return;
+      }
+
+      if (data.mailto) {
+        window.location.href = data.mailto;
       }
 
       setStatus("success");
