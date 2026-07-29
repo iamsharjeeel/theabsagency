@@ -11,17 +11,16 @@ import { CtaLink } from "@/components/cta-link";
 
 export function ServicesShowcase() {
   return (
-    <section className="bg-background px-5 py-24 md:px-8 md:py-32">
+    <section className="bg-background px-5 section-y md:px-8">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <FadeIn>
           <SectionLabel>Capabilities</SectionLabel>
           <h2 className="heading-display text-3xl text-foreground md:text-5xl">
-            Four pillars. One outcome.
+            What we run
           </h2>
-          <p className="mt-6 max-w-md text-base font-light leading-relaxed text-on-surface-variant">
+          <p className="prose-body mt-6 text-base text-on-surface-variant md:text-lg">
             Digital marketing, brand identity, market analysis, and creative
-            design — orchestrated to generate leads, book appointments, and
-            scale revenue.
+            design, run as one system instead of four vendors.
           </p>
           <div className="mt-8">
             <CtaLink href="/services" variant="outline">
@@ -38,11 +37,11 @@ export function ServicesShowcase() {
                 value={service.id}
                 className="border-outline-variant"
               >
-                <AccordionTrigger className="py-5 font-heading text-base tracking-[0.08em] text-foreground uppercase hover:no-underline hover:text-primary md:text-lg">
+                <AccordionTrigger className="py-7 font-heading text-base tracking-[0.08em] text-foreground uppercase hover:no-underline hover:text-primary md:py-8 md:text-lg">
                   {service.title}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-sm font-light leading-relaxed text-on-surface-variant md:text-base">
-                  {service.summary}
+                <AccordionContent className="pb-7 text-sm font-light leading-[1.6] text-on-surface-variant md:pb-8 md:text-base">
+                  <p className="max-w-[62ch]">{service.teaser}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -42,6 +42,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-playfair);
+  --spacing-section: var(--section-y);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -49,6 +50,7 @@
 }
 
 :root {
+  --section-y: 4.5rem;
   --background: #fbf8f0;
   --surface: #fbf8f0;
   --surface-container-lowest: #ffffff;
@@ -127,6 +129,12 @@
   --popover-foreground: #eae1d4;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --section-y: 7.5rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -154,6 +162,10 @@
   }
 }
 
+@utility section-y {
+  padding-block: var(--section-y);
+}
+
 @utility label-caps {
   font-size: 0.75rem;
   letter-spacing: 0.15em;
@@ -166,7 +178,13 @@
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1.15;
+}
+
+@utility prose-body {
+  max-width: 62ch;
+  line-height: 1.6;
+  font-weight: 300;
 }
 
 .grain {

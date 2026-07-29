@@ -6,12 +6,12 @@ export function Footer() {
 
   return (
     <footer className="border-t border-outline-variant/50 bg-surface-low">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-3 md:px-8 md:py-20">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 pt-16 pb-8 md:grid-cols-3 md:px-8 md:pt-20 md:pb-10">
         <div className="space-y-4">
           <p className="font-heading text-xs tracking-[0.22em] text-foreground uppercase">
             {SITE.wordmark}
           </p>
-          <p className="max-w-xs text-sm font-light leading-relaxed text-on-surface-variant">
+          <p className="prose-body max-w-xs text-sm text-on-surface-variant">
             {SITE.tagline} Boutique sales & marketing from Phoenix, AZ.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-outline-variant/40">
-        <p className="mx-auto max-w-7xl px-5 py-6 text-xs tracking-wide text-outline md:px-8">
+        <p className="mx-auto max-w-7xl px-5 pt-10 pb-10 text-xs tracking-wide text-outline md:px-8 md:pt-12 md:pb-12">
           © {year} {SITE.name}. All rights reserved.
         </p>
       </div>

@@ -4,8 +4,8 @@ import { SectionLabel } from "@/components/section-label";
 import { cn } from "@/lib/utils";
 
 export function CtaBand({
-  title = "Ready for precision growth?",
-  copy = "Book a strategy call. We'll map the levers that fill your pipeline — without the agency noise.",
+  title = "Let's Fill Your Calendar.",
+  copy = "Book a strategy call. We'll show you where your pipeline is leaking before you spend another dollar on ads.",
   className,
 }: {
   title?: string;
@@ -15,7 +15,7 @@ export function CtaBand({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-surface-container px-5 py-24 md:px-8 md:py-32",
+        "relative bg-surface-container px-5 section-y md:px-8",
         className
       )}
     >
@@ -25,7 +25,7 @@ export function CtaBand({
         <h2 className="heading-display text-3xl text-foreground md:text-5xl">
           {title}
         </h2>
-        <p className="mx-auto mt-6 max-w-xl text-base font-light leading-relaxed text-on-surface-variant md:text-lg">
+        <p className="prose-body mx-auto mt-6 text-base text-on-surface-variant md:text-lg">
           {copy}
         </p>
         <div className="mt-10">

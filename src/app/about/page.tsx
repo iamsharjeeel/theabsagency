@@ -4,40 +4,41 @@ import { FadeIn } from "@/components/fade-in";
 import { SectionLabel } from "@/components/section-label";
 import { CtaLink } from "@/components/cta-link";
 import { CtaBand } from "@/components/cta-band";
-import { SITE, VALUES } from "@/lib/constants";
+import { ABOUT_STATS, SITE, VALUES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Meet ${SITE.founder}, founder of ${SITE.name} — a boutique sales & marketing consultancy in Phoenix, AZ built on discretion, precision, and results.`,
+  description: `Meet ${SITE.founder}, founder of ${SITE.name}. A Phoenix sales & marketing agency measured by appointments booked and deals closed.`,
 };
 
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-surface-low pt-28 pb-20 md:pt-36 md:pb-28">
+      <section className="relative bg-surface-low pt-28 md:pt-36 section-y">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,color-mix(in_srgb,var(--primary)_10%,transparent),transparent_50%)]" />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <SectionLabel>About</SectionLabel>
             <h1 className="heading-display max-w-3xl text-4xl text-foreground md:text-6xl">
-              Built for brands that prefer substance over spectacle
+              Marketing measured by appointments
             </h1>
           </FadeIn>
         </div>
       </section>
 
-      <section className="bg-background px-5 py-24 md:px-8 md:py-32">
+      <section className="bg-background px-5 section-y md:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn>
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
-                alt={`${SITE.founder}, founder of ${SITE.name}`}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="bg-surface-container p-3 md:p-4">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
+                  alt={`${SITE.founder}, founder of ${SITE.name}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </FadeIn>
 
@@ -46,38 +47,38 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl text-foreground md:text-4xl">
               {SITE.founder}
             </h2>
-            <div className="mt-6 space-y-5 text-base font-light leading-relaxed text-on-surface-variant md:text-lg">
-              <p>
-                The A.B.S. Agency exists because ambitious businesses deserve
-                marketing that behaves like a sales engine — not a content
-                machine. Founded in Phoenix by {SITE.founder}, ABS was built for
-                operators who value discretion, clarity, and measurable growth.
+            <div className="mt-6 space-y-5 text-base text-on-surface-variant md:text-lg">
+              <p className="prose-body">
+                Joshua Mayes started The A.B.S. Agency in Phoenix because most
+                marketing gets judged on impressions, not on appointments booked
+                or deals closed. ABS reports on the two numbers that move
+                revenue.
               </p>
-              <p>
-                Our philosophy is simple: precision over volume, systems over
-                slogans, results over noise. We design brand identity, market
-                strategy, creative, and digital campaigns that generate leads,
-                book appointments, and scale revenue — powered by automation we
-                own and refine.
-              </p>
-              <p>
-                If your brand should feel expensive without shouting, and your
-                pipeline should fill without chaos, you&apos;re in the right place.
+              <p className="prose-body">
+                We build brand, strategy, and campaigns, then measure all of it
+                against your calendar and your close rate. This is quiet,
+                deliberate work for operators who want the results without the
+                noise.
               </p>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      <section className="border-y border-outline-variant/50 bg-surface-container px-5 py-20 md:px-8 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 text-center sm:grid-cols-3">
-          {[
-            { value: "500+", label: "Clients served" },
-            { value: "10+", label: "Years active" },
-            { value: "100%", label: "Results focus" },
-          ].map((stat, i) => (
-            <FadeIn key={stat.label} delay={0.08 * i}>
-              <p className="heading-display text-4xl text-primary md:text-5xl">
+      <section className="border-y border-outline-variant/50 bg-surface-container px-5 section-y md:px-8">
+        <div className="mx-auto grid max-w-7xl gap-0 text-center sm:grid-cols-3">
+          {ABOUT_STATS.map((stat, i) => (
+            <FadeIn
+              key={stat.label}
+              delay={0.08 * i}
+              className={
+                i > 0
+                  ? "border-t border-outline-variant/60 py-10 sm:border-t-0 sm:border-l sm:py-0 sm:px-8"
+                  : "py-10 sm:py-0 sm:px-8"
+              }
+            >
+              <div className="mx-auto mb-5 h-px w-12 bg-outline-variant sm:mx-auto" />
+              <p className="heading-display text-3xl text-primary md:text-5xl">
                 {stat.value}
               </p>
               <p className="mt-3 text-xs tracking-[0.15em] text-on-surface-variant uppercase">
@@ -88,12 +89,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-background px-5 py-24 md:px-8 md:py-32">
+      <section className="bg-background px-5 section-y md:px-8">
         <div className="mx-auto max-w-7xl">
           <FadeIn className="mb-14 max-w-2xl">
             <SectionLabel>Approach</SectionLabel>
             <h2 className="heading-display text-3xl text-foreground md:text-4xl">
-              Three pillars we never compromise
+              How we work
             </h2>
           </FadeIn>
 
@@ -104,7 +105,7 @@ export default function AboutPage() {
                 <h3 className="mt-3 font-heading text-2xl tracking-[0.08em] text-foreground uppercase">
                   {value.title}
                 </h3>
-                <p className="mt-4 text-sm font-light leading-relaxed text-on-surface-variant md:text-base">
+                <p className="prose-body mt-4 text-sm text-on-surface-variant md:text-base">
                   {value.description}
                 </p>
               </FadeIn>
@@ -121,8 +122,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Let's build your growth system"
-        copy="Tell us where you are. We'll show you the quietest path to more appointments and stronger revenue."
+        title="Ready to talk pipeline?"
+        copy="Tell us where you are. We'll show you the fastest path to more booked appointments."
       />
     </>
   );

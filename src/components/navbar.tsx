@@ -35,9 +35,9 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300",
+        "fixed inset-x-0 top-0 z-50 isolate transition-[background-color,border-color] duration-300",
         scrolled || open
-          ? "border-b border-outline-variant/40 bg-background/80 backdrop-blur-md"
+          ? "border-b border-outline-variant/40 bg-background/95"
           : "border-b border-transparent bg-transparent"
       )}
     >
@@ -101,7 +101,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="border-t border-outline-variant/40 bg-background/95 backdrop-blur-md lg:hidden"
+            className="border-t border-outline-variant/40 bg-background lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-5 py-6">
               {NAV_LINKS.map((link) => (

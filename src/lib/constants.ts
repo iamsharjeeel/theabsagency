@@ -26,55 +26,63 @@ export const SERVICES = [
   {
     id: "digital-marketing",
     title: "Digital Marketing",
-    summary:
+    teaser:
       "Campaigns engineered to attract qualified leads and fill your pipeline with buyers ready to talk.",
+    summary:
+      "Paid and organic campaigns built to put qualified buyers on your calendar.",
     detail:
-      "We build and operate paid and organic systems that surface your offer to the right audience — then convert attention into booked conversations. From funnel architecture to creative testing and automation, every channel is measured against appointments and revenue, not vanity metrics.",
+      "We set up funnels, creative tests, and channel automation so attention turns into booked conversations. Every channel is scored against appointments and revenue.",
   },
   {
     id: "brand-identity",
     title: "Brand Identity Development",
+    teaser: "Identity systems that make premium pricing feel obvious.",
     summary:
-      "Quiet luxury positioning that makes your brand feel intentional, credible, and unmistakably yours.",
+      "Positioning that makes your brand feel intentional, and priced accordingly.",
     detail:
-      "We clarify your voice, visual system, and market stance so every touchpoint reinforces trust. Identity work here is strategic — designed to elevate perception, support premium pricing, and create consistency across sales materials, digital presence, and client experience.",
+      "We clarify voice, visuals, and market stance so sales materials and digital touchpoints reinforce the same offer. The goal is clearer positioning that supports the price you want to charge.",
   },
   {
     id: "market-analysis",
     title: "Market Analysis",
+    teaser: "Competitive intel that tells you exactly where to spend next.",
     summary:
-      "Clear competitive intelligence that reveals where demand lives and how to win it.",
+      "Category mapping that shows where demand sits and which message wins it.",
     detail:
-      "Before we scale spend or redesign creative, we map your category: buyer motivations, competitive gaps, messaging angles, and conversion barriers. The output is actionable — prioritized opportunities your sales and marketing teams can execute against immediately.",
+      "Before we scale spend or redesign creative, we map buyer motivations, competitive gaps, and conversion barriers. You get a short list of opportunities the team can act on immediately.",
   },
   {
     id: "creative-design",
     title: "Creative Design",
+    teaser: "Pages and collateral built to move a prospect to yes.",
     summary:
-      "Refined assets that convert — landing pages, sales collateral, and campaign visuals with purpose.",
+      "Landing pages, decks, and campaign visuals built to guide a prospect to a decision.",
     detail:
-      "Design is never decoration. We craft pages, decks, and campaign systems that guide prospects toward a decision. Every layout, type choice, and visual hierarchy is tuned for clarity, trust, and conversion — powered by automation so iteration stays fast.",
+      "We design pages and sales assets around hierarchy, clarity, and conversion. Automation keeps iteration fast so creative stays tied to what the pipeline actually needs.",
   },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "ABS didn't add noise. They installed a system that books meetings while we focus on closing.",
+      "We stopped guessing which leads to call back. ABS built a pipeline that tells us who's ready.",
     author: "Marcus Chen",
     role: "Founder, Mesa Growth Partners",
+    sample: true,
   },
   {
     quote:
-      "The brand work elevated how we're perceived — and the pipeline followed. Discreet, precise, effective.",
+      "They rebuilt our brand and our funnel at the same time. Booked calls went up [X]%.",
     author: "Elena Vargas",
     role: "Principal, Vargas Advisory",
+    sample: true,
   },
   {
     quote:
-      "Finally a partner that measures success the way we do: appointments set and revenue closed.",
+      "First agency that reported on booked calls and closed revenue instead of impressions.",
     author: "David Okonkwo",
     role: "VP Sales, Sunbelt Logistics",
+    sample: true,
   },
 ] as const;
 
@@ -82,27 +90,27 @@ export const FAQS = [
   {
     question: "What sets The A.B.S. Agency apart?",
     answer:
-      "We operate as a boutique consultancy — not a volume agency. Our work is discreet, systems-driven, and judged by appointments booked and revenue grown. Automation is built in-house so delivery stays sharp and scalable without the usual agency theater.",
+      "We are a boutique consultancy judged by appointments booked and revenue grown. Automation is built in-house so delivery stays sharp.",
   },
   {
     question: "How do you approach market research?",
     answer:
-      "We combine competitive mapping, buyer interviews where needed, and performance signal analysis. Research is never a binder on a shelf — it feeds messaging, creative, channel selection, and sales enablement from day one.",
+      "We combine competitive mapping, buyer interviews where needed, and performance signal analysis. Research feeds messaging, creative, channel selection, and sales enablement from day one.",
   },
   {
     question: "Do you work with small businesses?",
     answer:
-      "Yes. We partner with ambitious small businesses and sales professionals who want precision over noise. If you're ready to invest in systems that generate leads and book appointments, we're built for you.",
+      "Yes. We partner with small businesses and sales professionals who want systems that generate leads and book appointments.",
   },
   {
     question: "How are results measured?",
     answer:
-      "Primary metrics: qualified leads, booked appointments, and attributed revenue. Secondary signals — engagement, brand perception, conversion rate — are tracked only insofar as they move those outcomes.",
+      "Primary metrics: qualified leads, booked appointments, and attributed revenue. Engagement and brand signals matter only when they move those outcomes.",
   },
   {
     question: "What is a typical timeline to results?",
     answer:
-      "Foundation work (positioning, tracking, creative, automation) usually lands in the first 2–4 weeks. Measurable pipeline movement commonly appears within 30–60 days, depending on offer complexity and channel maturity.",
+      "Foundation work (positioning, tracking, creative, automation) usually lands in the first 2–4 weeks. Pipeline movement depends on offer complexity and channel maturity.",
   },
 ] as const;
 
@@ -110,16 +118,22 @@ export const VALUES = [
   {
     title: "Discretion",
     description:
-      "Quiet execution. No loud campaigns for the sake of noise — just work that respects your brand and your clients' trust.",
+      "No campaigns run for their own sake. Every dollar spent should trace back to a booked call.",
   },
   {
     title: "Precision",
     description:
-      "Every channel, message, and design choice is intentional. We cut what doesn't convert and double down on what does.",
+      "Every channel, message, and design choice has a job. We cut what doesn't convert and double down on what does.",
   },
   {
-    title: "Results over noise",
+    title: "Revenue, Not Reach",
     description:
-      "Vanity metrics don't impress us. Leads, appointments, and revenue do — and that's how we keep score.",
+      "We report on appointments booked and deals closed. Impressions don't make the summary.",
   },
+] as const;
+
+export const ABOUT_STATS = [
+  { value: "500+", label: "Clients served" },
+  { value: "[X]+", label: "Years active" },
+  { value: "[avg appts/mo]", label: "Avg appointments booked" },
 ] as const;

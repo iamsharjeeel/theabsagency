@@ -101,10 +101,10 @@ export function ContactForm() {
   ];
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-5" aria-live="polite">
-      <div className="grid gap-5 sm:grid-cols-2">
+    <form onSubmit={onSubmit} noValidate className="space-y-8" aria-live="polite">
+      <div className="grid gap-8 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-8">
         {fields.map((field) => (
-          <div key={field.key} className="space-y-2">
+          <div key={field.key} className="space-y-3">
             <Label htmlFor={field.key} className="label-caps text-on-surface-variant">
               {field.label}
             </Label>
@@ -128,7 +128,7 @@ export function ContactForm() {
         ))}
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         <Label htmlFor="message" className="label-caps text-on-surface-variant">
           Message
         </Label>

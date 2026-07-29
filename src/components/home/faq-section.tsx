@@ -10,7 +10,7 @@ import { FAQS } from "@/lib/constants";
 
 export function FaqSection() {
   return (
-    <section className="bg-background px-5 py-24 md:px-8 md:py-32">
+    <section className="bg-background px-5 section-y md:px-8">
       <div className="mx-auto max-w-3xl">
         <FadeIn className="mb-12 text-center">
           <SectionLabel>FAQ</SectionLabel>
@@ -27,11 +27,11 @@ export function FaqSection() {
                 value={`faq-${i}`}
                 className="border-outline-variant"
               >
-                <AccordionTrigger className="py-5 text-left text-sm font-normal tracking-wide text-foreground hover:no-underline hover:text-primary md:text-base">
+                <AccordionTrigger className="py-7 text-left text-sm font-normal tracking-wide text-foreground hover:no-underline hover:text-primary md:text-base">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-sm font-light leading-relaxed text-on-surface-variant">
-                  {faq.answer}
+                <AccordionContent className="pb-7 text-sm font-light leading-[1.6] text-on-surface-variant">
+                  <p className="max-w-[62ch]">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}
