@@ -2,6 +2,7 @@
 
 ## 2026-07-31
 
+- Mobile/perf design pass: asset compression, safer FadeIn, content-visibility, pricing feature collapse, touch targets
 - Home trust bar: infinite scroll of client businesses with hover accent
 - Contact form delivers JSON to LeadConnector webhook (no mailto)
 - Pricing page + home teaser: ABS Pro, Smart Pro, ABS Platinum with monthly/yearly toggle
