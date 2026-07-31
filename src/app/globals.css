@@ -40,8 +40,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-poppins);
+  --font-heading: var(--font-poppins);
   --spacing-section: var(--section-y);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -176,10 +176,10 @@
 }
 
 @utility heading-display {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-poppins), sans-serif;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-transform: none;
   line-height: 1.15;
 }
 

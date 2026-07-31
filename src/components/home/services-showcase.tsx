@@ -37,7 +37,7 @@ export function ServicesShowcase() {
                 value={service.id}
                 className="border-outline-variant"
               >
-                <AccordionTrigger className="py-7 font-heading text-base font-semibold tracking-[0.02em] text-foreground uppercase hover:no-underline hover:text-primary md:py-8 md:text-lg">
+                <AccordionTrigger className="py-7 font-heading text-base font-semibold tracking-tight text-foreground hover:no-underline hover:text-primary md:py-8 md:text-lg">
                   {service.title}
                 </AccordionTrigger>
                 <AccordionContent className="pb-7 text-sm font-medium leading-[1.65] text-on-surface-variant md:pb-8 md:text-base">

@@ -35,7 +35,8 @@ export default function AboutPage() {
                   src="/images/joshua-mayes.jpg"
                   alt={`${SITE.founder}, founder of ${SITE.name}`}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  quality={82}
                   className="object-cover"
                   priority
                 />
@@ -103,7 +104,7 @@ export default function AboutPage() {
             {VALUES.map((value, i) => (
               <FadeIn key={value.title} delay={0.08 * i}>
                 <p className="label-caps text-primary-fixed-dim">0{i + 1}</p>
-                <h3 className="mt-3 font-heading text-2xl font-semibold tracking-[0.02em] text-foreground uppercase">
+                <h3 className="mt-3 font-heading text-2xl font-semibold tracking-tight text-foreground">
                   {value.title}
                 </h3>
                 <p className="prose-body mt-4 text-sm text-on-surface-variant md:text-base">

@@ -30,7 +30,7 @@ export function Footer() {
           >
             {SITE.email}
           </a>
-          <p>{SITE.location}</p>
+          <p>{SITE.address}</p>
         </div>
 
         <div className="space-y-3 text-sm text-on-surface-variant">
@@ -51,12 +51,15 @@ export function Footer() {
           >
             LinkedIn
           </a>
-          <div className="flex gap-6 pt-2">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 pt-2">
             <Link href="/privacy" className="transition-colors hover:text-foreground">
               Privacy
             </Link>
             <Link href="/terms" className="transition-colors hover:text-foreground">
               Terms
+            </Link>
+            <Link href="/sms-terms" className="transition-colors hover:text-foreground">
+              SMS Terms
             </Link>
           </div>
         </div>

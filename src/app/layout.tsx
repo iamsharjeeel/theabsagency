@@ -1,23 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { MotionProvider } from "@/components/motion-provider";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -69,12 +64,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} min-h-screen bg-background text-foreground`}
+        className={`${poppins.variable} min-h-screen bg-background font-sans text-foreground`}
       >
         <ThemeProvider>
-          <Navbar />
-          <main id="main">{children}</main>
-          <Footer />
+          <MotionProvider>
+            <Navbar />
+            <main id="main">{children}</main>
+            <Footer />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

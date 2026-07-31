@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { FadeIn } from "@/components/fade-in";
 import { SectionLabel } from "@/components/section-label";
-import { ContactForm } from "@/components/contact-form";
 import { SERVICES, SITE } from "@/lib/constants";
+
+const ContactForm = dynamic(
+  () =>
+    import("@/components/contact-form").then((mod) => mod.ContactForm),
+  {
+    loading: () => (
+      <div className="h-80 animate-pulse bg-surface-low" aria-hidden />
+    ),
+  }
+);
 
 export const metadata: Metadata = {
   title: "Services & Contact",
@@ -35,7 +45,7 @@ export default function ServicesPage() {
               <article className="grid gap-6 border-t border-outline-variant/60 pt-10 lg:grid-cols-[280px_1fr] lg:gap-16">
                 <div>
                   <p className="label-caps text-primary">0{i + 1}</p>
-                  <h2 className="mt-3 font-heading text-2xl font-semibold tracking-[0.02em] text-foreground uppercase md:text-3xl">
+                  <h2 className="mt-3 font-heading text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
                     {service.title}
                   </h2>
                 </div>

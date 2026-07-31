@@ -6,12 +6,19 @@ export const SITE = {
     "A boutique sales & marketing agency in Phoenix, AZ. We help small businesses and sales professionals generate leads, book appointments, and scale revenue.",
   founder: "Joshua Mayes",
   location: "Phoenix, AZ",
+  address: "Phoenix, AZ 85043",
   phone: "(602) 555-0148",
   email: "hello@theabsagency.com",
   url: "https://theabsagency.com",
+  governingLaw: "Commonwealth of Pennsylvania",
   social: {
     instagram: "https://instagram.com/theabsagency",
     linkedin: "https://linkedin.com/company/theabsagency",
+  },
+  legal: {
+    privacyEffective: "April 3, 2024",
+    termsEffective: "April 3, 2023",
+    smsEffective: "April 8, 2024",
   },
 } as const;
 
