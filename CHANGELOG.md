@@ -2,6 +2,7 @@
 
 ## 2026-07-31
 
+- Hero background: inline SVG desert-building sunset illustration (replaces photo on page)
 - Mobile/perf design pass: asset compression, safer FadeIn, content-visibility, pricing feature collapse, touch targets
 - Home trust bar: infinite scroll of client businesses with hover accent
 - Contact form delivers JSON to LeadConnector webhook (no mailto)

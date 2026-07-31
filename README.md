@@ -43,7 +43,8 @@ On the home page, nav text is white over the dark hero until scroll; then it swi
 
 - Logo: `public/images/logo.png` (~71KB; nav + footer; light asset, CSS-adapted for light/dark bg)
 - Founder portrait: `public/images/joshua-mayes.jpg` (~193KB; About)
-- Hero: `public/images/hero.jpg` (~223KB; Home; AVIF/WebP via `next/image`)
+- Hero background: inline SVG (`src/components/home/hero-illustration.tsx`) — flat desert-modern Phoenix sunset; no raster hero asset required for the page
+- OG/social fallback image: `public/images/hero.jpg` (metadata only)
 
 Site copy, stats, nav, FAQs, and contact details live in `src/lib/constants.ts`.
 Legal template placeholders (`business name`, email, phone, address, governing law, effective dates) resolve from `SITE`.

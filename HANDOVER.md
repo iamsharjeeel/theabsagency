@@ -2,6 +2,7 @@
 
 ## What changed
 
+- Home hero background swapped to inline SVG (`hero-illustration.tsx`) — desert building at sunset; copy/CTA unchanged; `hero.jpg` kept for OG only
 - Mobile + load audit: compressed hero/portrait/logo; mobile nav/safe-area; softer FadeIn easing; tighter section padding; `content-visibility` on below-fold sections; pricing feature collapse on mobile; touch-friendly CTAs
 - Home trust bar (`TRUSTED_CLIENTS`): infinite CSS marquee, hover → primary
 - Contact form POSTs JSON to LeadConnector webhook (`CONTACT_WEBHOOK_URL`; default set in API route)
@@ -28,4 +29,5 @@
 - `src/lib/legal.tsx` — privacy / terms / sms-terms content
 - `src/components/legal-document.tsx` — legal page renderer
 - `src/components/fade-in.tsx`, `motion-provider.tsx` — animation
-- `public/images/{hero,joshua-mayes}.jpg`
+- `src/components/home/hero-illustration.tsx` — hero SVG background
+- `public/images/{hero,joshua-mayes}.jpg` (hero.jpg = OG only)

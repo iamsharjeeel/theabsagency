@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { m, useReducedMotion } from "framer-motion";
 import { CtaLink } from "@/components/cta-link";
+import { HeroIllustration } from "@/components/home/hero-illustration";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -10,25 +10,16 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden">
-      <Image
-        src="/images/hero.jpg"
-        alt="Desert-modern Phoenix architecture at golden hour"
-        fill
-        priority
-        fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1600px"
-        quality={75}
-        className="object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-black/40 md:bg-black/35" />
+      <HeroIllustration className="absolute inset-0 h-full w-full scale-[1.12] origin-[78%_55%] md:scale-100 md:origin-center" />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 md:hidden"
         style={{
           background:
-            "linear-gradient(to right, rgba(0,0,0,0.6), transparent 75%)",
+            "linear-gradient(to right, rgba(13,9,6,0.72) 0%, rgba(13,9,6,0.35) 42%, transparent 62%)",
         }}
+        aria-hidden
       />
-      <div className="absolute inset-0 grain opacity-25 md:opacity-40" />
+      <div className="absolute inset-0 grain opacity-20 md:opacity-30" />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:justify-center md:px-8 md:pb-24 md:pt-28">
         <div className="max-w-4xl">
