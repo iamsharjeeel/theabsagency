@@ -2,6 +2,7 @@
 
 ## What changed
 
+- Official logo (`public/images/logo.png`) in nav + footer; light cream asset → as-is on dark, `brightness-0` on light (`dark:` restores)
 - Display/body font: **Poppins** (clearer than thin serif caps)
 - Legal pages from Google Doc template → `/privacy`, `/terms`, `/sms-terms`
   - Dynamic fields: business name, email, phone, address, governing law, effective dates (`SITE` in `constants.ts`)

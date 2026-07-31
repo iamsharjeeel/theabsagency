@@ -40,6 +40,7 @@ On the home page, nav text is white over the dark hero until scroll; then it swi
 
 ## Assets
 
+- Logo: `public/images/logo.png` (nav + footer; light asset, CSS-adapted for light/dark bg)
 - Founder portrait: `public/images/joshua-mayes.jpg` (About page)
 - Hero: `public/images/hero.jpg` (Home)
 

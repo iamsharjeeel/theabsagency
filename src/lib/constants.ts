@@ -1,6 +1,7 @@
 export const SITE = {
   name: "The A.B.S. Agency",
   wordmark: "THE A.B.S. AGENCY",
+  logo: "/images/logo.png",
   tagline: "Precision growth for ambitious brands.",
   description:
     "A boutique sales & marketing agency in Phoenix, AZ. We help small businesses and sales professionals generate leads, book appointments, and scale revenue.",

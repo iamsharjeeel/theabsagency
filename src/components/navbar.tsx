@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, m } from "framer-motion";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { SiteLogo } from "@/components/site-logo";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -48,14 +49,14 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className={cn(
-            "font-heading text-[0.8rem] font-semibold tracking-[0.1em] uppercase transition-colors md:text-sm",
-            overDarkHero
-              ? "text-white hover:text-white/80"
-              : "text-foreground hover:text-primary"
-          )}
+          aria-label="The A.B.S. Agency home"
+          className="inline-flex h-10 items-center md:h-12"
         >
-          {SITE.wordmark}
+          <SiteLogo
+            priority
+            onDark={overDarkHero}
+            className="h-full max-w-[7.5rem] md:max-w-[9rem]"
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
