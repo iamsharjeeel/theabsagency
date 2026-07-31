@@ -35,7 +35,7 @@ export default function ServicesPage() {
               <article className="grid gap-6 border-t border-outline-variant/60 pt-10 lg:grid-cols-[280px_1fr] lg:gap-16">
                 <div>
                   <p className="label-caps text-primary">0{i + 1}</p>
-                  <h2 className="mt-3 font-heading text-2xl font-medium tracking-[0.06em] text-foreground uppercase md:text-3xl">
+                  <h2 className="mt-3 font-heading text-2xl font-semibold tracking-[0.02em] text-foreground uppercase md:text-3xl">
                     {service.title}
                   </h2>
                 </div>
@@ -60,8 +60,7 @@ export default function ServicesPage() {
               Book a strategy call
             </h2>
             <p className="prose-body mt-5 text-base text-on-surface-variant">
-              Tell us about your business. We&apos;ll reply within [one business
-              day].
+              Tell us about your business. We&apos;ll reply within 1 hour.
             </p>
 
             <div className="mt-10 space-y-4 text-sm text-on-surface-variant">

@@ -2,9 +2,11 @@
 
 ## 2026-07-31
 
+- Real founder headshot + custom Phoenix hero photography
+- Stats: 133+ appts/mo; sample quote 93%; contact SLA 1 hour
+- Typography: body medium / display bold; removed antialiased thinning
 - Nav: white text over home hero; theme colors after scroll / on light pages
-- Typography: thicker weights + tighter tracking for clearer type sitewide
-- About: replaced stock portrait with founder photo at `public/images/joshua-mayes.jpg`
+- About: founder photo at `public/images/joshua-mayes.jpg`
 
 ## 2026-07-29
 

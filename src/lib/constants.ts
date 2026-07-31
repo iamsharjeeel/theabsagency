@@ -72,7 +72,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "They rebuilt our brand and our funnel at the same time. Booked calls went up [X]%.",
+      "They rebuilt our brand and our funnel at the same time. Booked calls went up 93%.",
     author: "Elena Vargas",
     role: "Principal, Vargas Advisory",
     sample: true,
@@ -134,6 +134,5 @@ export const VALUES = [
 
 export const ABOUT_STATS = [
   { value: "500+", label: "Clients served" },
-  { value: "[X]+", label: "Years active" },
-  { value: "[avg appts/mo]", label: "Avg appointments booked" },
+  { value: "133+", label: "Avg appointments booked / mo" },
 ] as const;

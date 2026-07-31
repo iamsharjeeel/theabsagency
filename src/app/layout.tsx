@@ -9,14 +9,14 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-        width: 1200,
-        height: 630,
+        url: "/images/hero.jpg",
+        width: 1536,
+        height: 1024,
         alt: SITE.name,
       },
     ],
@@ -69,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} min-h-screen bg-background text-foreground antialiased`}
+        className={`${inter.variable} ${playfair.variable} min-h-screen bg-background text-foreground`}
       >
         <ThemeProvider>
           <Navbar />

@@ -10,8 +10,8 @@ export function Hero() {
   return (
     <section className="relative min-h-[100svh]">
       <Image
-        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=80"
-        alt="Refined architectural interior with warm stone and natural light"
+        src="/images/hero.jpg"
+        alt="Desert-modern Phoenix architecture at golden hour"
         fill
         priority
         sizes="100vw"
@@ -40,7 +40,7 @@ export function Hero() {
           <h1 className="heading-display text-[clamp(2.5rem,8vw,5.75rem)] text-white">
             Precision Growth for Ambitious Brands
           </h1>
-          <p className="mt-7 max-w-[62ch] text-[1.25rem] font-normal leading-[1.65] text-white/90 md:mt-8">
+          <p className="mt-7 max-w-[62ch] text-[1.25rem] font-medium leading-[1.65] text-white md:mt-8">
             Lead generation, appointment booking, and revenue systems, handled
             without the agency theater.
           </p>

@@ -49,7 +49,7 @@ export function Navbar() {
         <Link
           href="/"
           className={cn(
-            "font-heading text-[0.75rem] font-medium tracking-[0.16em] uppercase transition-colors md:text-sm",
+            "font-heading text-[0.8rem] font-semibold tracking-[0.1em] uppercase transition-colors md:text-sm",
             overDarkHero
               ? "text-white hover:text-white/80"
               : "text-foreground hover:text-primary"
@@ -96,7 +96,7 @@ export function Navbar() {
           />
           <Link
             href="/services#contact"
-            className="hidden items-center justify-center bg-cta px-5 py-2.5 text-[0.75rem] font-medium tracking-[0.14em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.02] hover:brightness-110 md:inline-flex"
+            className="hidden items-center justify-center bg-cta px-5 py-2.5 text-[0.8rem] font-semibold tracking-[0.1em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.02] hover:brightness-110 md:inline-flex"
           >
             Book a Call
           </Link>
@@ -129,7 +129,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3 font-heading text-lg font-medium tracking-[0.1em] text-foreground uppercase"
+                    className="block py-3 font-heading text-lg font-semibold tracking-[0.04em] text-foreground uppercase"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
@@ -139,7 +139,7 @@ export function Navbar() {
               <li className="pt-4">
                 <Link
                   href="/services#contact"
-                  className="inline-flex w-full items-center justify-center bg-cta px-5 py-3.5 text-xs font-medium tracking-[0.14em] text-on-cta uppercase"
+                  className="inline-flex w-full items-center justify-center bg-cta px-5 py-3.5 text-xs font-semibold tracking-[0.1em] text-on-cta uppercase"
                   onClick={() => setOpen(false)}
                 >
                   Book a Call

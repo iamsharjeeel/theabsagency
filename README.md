@@ -41,3 +41,6 @@ On the home page, nav text is white over the dark hero until scroll; then it swi
 ## Assets
 
 - Founder portrait: `public/images/joshua-mayes.jpg` (About page)
+- Hero: `public/images/hero.jpg` (Home)
+
+Site copy, stats, nav, FAQs, and contact details live in `src/lib/constants.ts`.

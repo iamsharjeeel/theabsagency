@@ -117,7 +117,7 @@ export function ContactForm() {
               onChange={(e) => update(field.key, e.target.value)}
               aria-invalid={!!errors[field.key]}
               aria-describedby={errors[field.key] ? `${field.key}-error` : undefined}
-              className="h-11 rounded-sm border-outline-variant bg-surface-lowest font-normal"
+              className="h-11 rounded-sm border-outline-variant bg-surface-lowest font-medium"
             />
             {errors[field.key] && (
               <p id={`${field.key}-error`} className="text-xs text-destructive">
@@ -140,7 +140,7 @@ export function ContactForm() {
           onChange={(e) => update("message", e.target.value)}
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "message-error" : undefined}
-          className="rounded-sm border-outline-variant bg-surface-lowest font-normal"
+          className="rounded-sm border-outline-variant bg-surface-lowest font-medium"
         />
         {errors.message && (
           <p id="message-error" className="text-xs text-destructive">
@@ -153,7 +153,7 @@ export function ContactForm() {
         type="submit"
         disabled={status === "loading"}
         className={cn(
-          "inline-flex w-full items-center justify-center bg-cta px-7 py-3.5 text-[0.75rem] font-medium tracking-[0.14em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.01] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
+          "inline-flex w-full items-center justify-center bg-cta px-7 py-3.5 text-[0.8rem] font-semibold tracking-[0.1em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.01] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
         )}
       >
         {status === "loading" ? "Sending…" : "Send Inquiry"}

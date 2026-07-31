@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <h1 className="heading-display text-3xl text-foreground md:text-4xl">
         Privacy Policy
       </h1>
-      <div className="mt-8 space-y-4 text-sm font-normal leading-relaxed text-on-surface-variant md:text-base">
+      <div className="mt-8 space-y-4 text-sm font-medium leading-relaxed text-on-surface-variant md:text-base">
         <p>
           {SITE.name} (&quot;we&quot;, &quot;us&quot;) respects your privacy. When you submit
           our contact form, we collect the information you provide — name,

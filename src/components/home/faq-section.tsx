@@ -27,10 +27,10 @@ export function FaqSection() {
                 value={`faq-${i}`}
                 className="border-outline-variant"
               >
-                <AccordionTrigger className="py-7 text-left text-sm font-normal tracking-wide text-foreground hover:no-underline hover:text-primary md:text-base">
+                <AccordionTrigger className="py-7 text-left text-sm font-semibold tracking-normal text-foreground hover:no-underline hover:text-primary md:text-base">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-7 text-sm font-normal leading-[1.65] text-on-surface-variant">
+                <AccordionContent className="pb-7 text-sm font-medium leading-[1.65] text-on-surface-variant">
                   <p className="max-w-[62ch]">{faq.answer}</p>
                 </AccordionContent>
               </AccordionItem>

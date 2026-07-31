@@ -30,13 +30,13 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn>
             <div className="bg-surface-container p-3 md:p-4">
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src="/images/joshua-mayes.jpg"
                   alt={`${SITE.founder}, founder of ${SITE.name}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-top"
+                  className="object-cover"
                   priority
                 />
               </div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-outline-variant/50 bg-surface-container px-5 section-y md:px-8">
-        <div className="mx-auto grid max-w-7xl gap-0 text-center sm:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-0 text-center sm:grid-cols-2">
           {ABOUT_STATS.map((stat, i) => (
             <FadeIn
               key={stat.label}
@@ -82,7 +82,7 @@ export default function AboutPage() {
               <p className="heading-display text-3xl text-primary md:text-5xl">
                 {stat.value}
               </p>
-              <p className="mt-3 text-xs font-medium tracking-[0.12em] text-on-surface-variant uppercase">
+              <p className="mt-3 text-xs font-semibold tracking-[0.08em] text-on-surface-variant uppercase">
                 {stat.label}
               </p>
             </FadeIn>
@@ -103,7 +103,7 @@ export default function AboutPage() {
             {VALUES.map((value, i) => (
               <FadeIn key={value.title} delay={0.08 * i}>
                 <p className="label-caps text-primary-fixed-dim">0{i + 1}</p>
-                <h3 className="mt-3 font-heading text-2xl font-medium tracking-[0.06em] text-foreground uppercase">
+                <h3 className="mt-3 font-heading text-2xl font-semibold tracking-[0.02em] text-foreground uppercase">
                   {value.title}
                 </h3>
                 <p className="prose-body mt-4 text-sm text-on-surface-variant md:text-base">

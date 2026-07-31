@@ -141,7 +141,7 @@
   }
 
   html {
-    @apply scroll-smooth antialiased;
+    @apply scroll-smooth;
     color-scheme: light;
   }
 
@@ -150,7 +150,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans font-normal;
+    @apply bg-background text-foreground font-sans font-medium;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
     transition: background-color 0.35s ease, color 0.35s ease;
   }
 
@@ -158,7 +160,7 @@
   h2,
   h3,
   h4 {
-    @apply font-heading font-medium tracking-wide;
+    @apply font-heading font-semibold tracking-normal;
   }
 }
 
@@ -168,15 +170,15 @@
 
 @utility label-caps {
   font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @utility heading-display {
   font-family: var(--font-playfair), serif;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   line-height: 1.15;
 }
@@ -184,7 +186,7 @@
 @utility prose-body {
   max-width: 62ch;
   line-height: 1.65;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .grain {

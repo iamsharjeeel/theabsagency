@@ -13,7 +13,7 @@ export function ProofStrip() {
             <p className="heading-display text-4xl text-foreground md:text-6xl">
               500+
             </p>
-            <p className="mt-3 text-sm font-medium tracking-[0.1em] text-on-surface-variant uppercase">
+            <p className="mt-3 text-sm font-semibold tracking-[0.08em] text-on-surface-variant uppercase">
               Clients served
             </p>
           </div>
@@ -26,7 +26,7 @@ export function ProofStrip() {
           {TESTIMONIALS.map((t, i) => (
             <FadeIn key={t.author} delay={0.08 * i}>
               <blockquote className="flex h-full flex-col bg-surface-lowest p-10">
-                <p className="flex-1 font-heading text-[1.125rem] font-normal leading-[1.65] text-foreground">
+                <p className="flex-1 font-heading text-[1.125rem] font-medium leading-[1.65] text-foreground">
                   “{t.quote}”
                 </p>
                 <footer className="mt-8">
