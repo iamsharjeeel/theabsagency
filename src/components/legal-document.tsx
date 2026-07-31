@@ -63,16 +63,23 @@ export function LegalDocument({ doc }: { doc: LegalDoc }) {
         </div>
       </FadeIn>
 
-      <FadeIn delay={0.08} className="mt-10 space-y-4 text-sm font-medium leading-relaxed text-on-surface-variant md:text-base">
+      <div className="mt-10 space-y-4 text-sm font-medium leading-relaxed text-on-surface-variant md:text-base">
         {doc.blocks.map((block, i) => (
-          <Block key={i} block={block} />
+          <FadeIn key={i} delay={Math.min(i * 0.02, 0.2)} y={12}>
+            <Block block={block} />
+          </FadeIn>
         ))}
-        <p className="pt-6">
-          <Link href="/" className="text-primary underline-offset-2 hover:underline">
-            Return home
-          </Link>
-        </p>
-      </FadeIn>
+        <FadeIn y={12}>
+          <p className="pt-6">
+            <Link
+              href="/"
+              className="text-primary underline-offset-2 hover:underline"
+            >
+              Return home
+            </Link>
+          </p>
+        </FadeIn>
+      </div>
     </article>
   );
 }

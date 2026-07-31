@@ -15,7 +15,7 @@ export function FadeIn({
   children,
   className,
   delay = 0,
-  y = 24,
+  y = 16,
 }: FadeInProps) {
   const reduce = useReducedMotion();
 
@@ -25,11 +25,11 @@ export function FadeIn({
 
   return (
     <m.div
-      className={cn(className)}
+      className={cn("will-change-transform", className)}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px", amount: 0.2 }}
-      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, amount: 0.01, margin: "0px 0px -24px 0px" }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </m.div>
