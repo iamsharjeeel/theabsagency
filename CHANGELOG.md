@@ -2,6 +2,7 @@
 
 ## 2026-07-31
 
+- Pricing page + home teaser: ABS Pro, Smart Pro, ABS Platinum with monthly/yearly toggle
 - Official ABS logo in nav/footer with light/dark background handling (HD PNG)
 - Poppins display/body font; legal pages `/privacy`, `/terms`, `/sms-terms` from template with dynamic SITE data
 - Scroll/load animations via LazyMotion FadeIn; speed: AVIF/WebP, optimized imports, dynamic contact form

@@ -2,6 +2,7 @@
 
 ## What changed
 
+- `/pricing` + home teaser: ABS Pro ($149/$1490), Smart Pro ($249/$2899), ABS Platinum ($399/$3990) with feature sets from plan admin screenshots
 - Official logo (`public/images/logo.png`) in nav + footer; light cream asset → as-is on dark, `brightness-0` on light (`dark:` restores)
 - Display/body font: **Poppins** (clearer than thin serif caps)
 - Legal pages from Google Doc template → `/privacy`, `/terms`, `/sms-terms`

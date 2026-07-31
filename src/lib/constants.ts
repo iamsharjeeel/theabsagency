@@ -27,6 +27,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/services#contact", label: "Contact" },
 ] as const;
 
@@ -119,6 +120,11 @@ export const FAQS = [
     question: "What is a typical timeline to results?",
     answer:
       "Foundation work (positioning, tracking, creative, automation) usually lands in the first 2–4 weeks. Pipeline movement depends on offer complexity and channel maturity.",
+  },
+  {
+    question: "Which plan should I start with?",
+    answer:
+      "ABS Pro covers conversations, CRM, and funnels. Smart Pro adds campaigns, opportunities, and reporting. ABS Platinum unlocks the full stack — sites, communities, and every channel. Compare them on the Pricing page.",
   },
 ] as const;
 
