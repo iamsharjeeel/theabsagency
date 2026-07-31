@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations/contact";
-import { SITE } from "@/lib/constants";
+
+const WEBHOOK_URL =
+  process.env.CONTACT_WEBHOOK_URL ??
+  "https://services.leadconnectorhq.com/hooks/PeUGl5hUMfWxbaSLw4jD/webhook-trigger/62950ec7-6220-4199-b866-9a1e33d8732e";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -22,21 +25,41 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, company, email, phone, message } = parsed.data;
-  const subject = encodeURIComponent(`Inquiry from ${name} — ${company}`);
-  const bodyText = encodeURIComponent(
-    [
-      `Name: ${name}`,
-      `Company: ${company}`,
-      `Email: ${email}`,
-      `Phone: ${phone}`,
-      "",
-      message,
-    ].join("\n")
-  );
+  const payload = {
+    name: parsed.data.name,
+    company: parsed.data.company,
+    email: parsed.data.email,
+    phone: parsed.data.phone,
+    message: parsed.data.message,
+    source: "theabsagency.com",
+    submittedAt: new Date().toISOString(),
+  };
+
+  try {
+    const webhookRes = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(payload),
+      cache: "no-store",
+    });
+
+    if (!webhookRes.ok) {
+      return NextResponse.json(
+        { error: "Unable to deliver your inquiry. Please try again shortly." },
+        { status: 502 }
+      );
+    }
+  } catch {
+    return NextResponse.json(
+      { error: "Unable to deliver your inquiry. Please try again shortly." },
+      { status: 502 }
+    );
+  }
 
   return NextResponse.json({
     message: "Thank you. We'll be in touch shortly.",
-    mailto: `mailto:${SITE.email}?subject=${subject}&body=${bodyText}`,
   });
 }

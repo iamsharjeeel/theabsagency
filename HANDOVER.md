@@ -2,6 +2,7 @@
 
 ## What changed
 
+- Contact form POSTs JSON to LeadConnector webhook (`CONTACT_WEBHOOK_URL`; default set in API route)
 - `/pricing` + home teaser: ABS Pro ($149/$1490), Smart Pro ($249/$2899), ABS Platinum ($399/$3990) with feature sets from plan admin screenshots
 - Official logo (`public/images/logo.png`) in nav + footer; light cream asset → as-is on dark, `brightness-0` on light (`dark:` restores)
 - Display/body font: **Poppins** (clearer than thin serif caps)
@@ -13,6 +14,7 @@
 
 ## Pending (manual)
 
+- Set `CONTACT_WEBHOOK_URL` in Vercel env if overriding the default webhook
 - Replace placeholder phone/email/social/address in `src/lib/constants.ts`
 - Confirm governing law (doc uses Pennsylvania; change `SITE.governingLaw` if needed)
 - Replace sample testimonials with real client quotes

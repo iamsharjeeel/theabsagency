@@ -27,7 +27,7 @@ npm run build
 npm run lint
 ```
 
-Contact form validates client + server, then opens a `mailto:` draft to the agency email.
+Contact form validates client + server, then POSTs JSON to the LeadConnector webhook (`CONTACT_WEBHOOK_URL`).
 
 ## Deploy (Vercel)
 

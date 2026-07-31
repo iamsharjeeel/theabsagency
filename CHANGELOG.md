@@ -2,6 +2,7 @@
 
 ## 2026-07-31
 
+- Contact form delivers JSON to LeadConnector webhook (no mailto)
 - Pricing page + home teaser: ABS Pro, Smart Pro, ABS Platinum with monthly/yearly toggle
 - Official ABS logo in nav/footer with light/dark background handling (HD PNG)
 - Poppins display/body font; legal pages `/privacy`, `/terms`, `/sms-terms` from template with dynamic SITE data
