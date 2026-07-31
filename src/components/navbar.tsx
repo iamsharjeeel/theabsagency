@@ -119,28 +119,32 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <m.div
-            initial={{ opacity: 0, y: -8 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
             className="border-t border-outline-variant/40 bg-background lg:hidden"
+            style={{
+              minHeight:
+                "calc(100svh - 3.5rem - env(safe-area-inset-top, 0px))",
+            }}
           >
-            <ul className="flex flex-col gap-1 px-5 py-6">
+            <ul className="flex flex-col gap-1 px-5 py-8">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3.5 font-heading text-base font-semibold tracking-tight text-foreground sm:text-lg"
+                    className="block py-3.5 font-heading text-xl font-semibold tracking-tight text-foreground"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
-              <li className="pt-4">
+              <li className="pt-6">
                 <Link
                   href="/services#contact"
-                  className="inline-flex w-full items-center justify-center bg-cta px-5 py-3.5 text-xs font-semibold tracking-[0.1em] text-on-cta uppercase"
+                  className="inline-flex min-h-12 w-full items-center justify-center bg-cta px-5 py-3.5 text-xs font-semibold tracking-[0.1em] text-on-cta uppercase"
                   onClick={() => setOpen(false)}
                 >
                   Book a Call
