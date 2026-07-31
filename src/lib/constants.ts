@@ -31,6 +31,15 @@ export const NAV_LINKS = [
   { href: "/services#contact", label: "Contact" },
 ] as const;
 
+export const TRUSTED_CLIENTS = [
+  "Allied Help",
+  "Game Winner Events LLC",
+  "House Hunter Gal PLLC",
+  "Melt Scottsdale",
+  "MicroOne Technologies LLC",
+  "Only Veins",
+] as const;
+
 export const SERVICES = [
   {
     id: "digital-marketing",

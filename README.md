@@ -11,7 +11,7 @@ Boutique marketing site for The A.B.S. Agency (Phoenix, AZ) — Next.js 15, Tail
 
 ## Pages
 
-- `/` — Home (hero, services, pricing teaser, proof, FAQ, CTA)
+- `/` — Home (hero, trust bar, services, pricing teaser, proof, FAQ, CTA)
 - `/about` — Founder story, stats, values
 - `/services` — Service detail + contact form (`#contact`)
 - `/pricing` — ABS Pro / Smart Pro / ABS Platinum (`src/lib/pricing.ts`)

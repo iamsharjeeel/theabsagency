@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero";
+import { TrustBar } from "@/components/home/trust-bar";
 import { ServicesShowcase } from "@/components/home/services-showcase";
 import { PricingTeaser } from "@/components/pricing/pricing-teaser";
 import { ProofStrip } from "@/components/home/proof-strip";
@@ -9,6 +10,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <TrustBar />
       <ServicesShowcase />
       <PricingTeaser />
       <ProofStrip />

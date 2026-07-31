@@ -2,6 +2,7 @@
 
 ## What changed
 
+- Home trust bar (`TRUSTED_CLIENTS`): infinite CSS marquee, hover → primary
 - Contact form POSTs JSON to LeadConnector webhook (`CONTACT_WEBHOOK_URL`; default set in API route)
 - `/pricing` + home teaser: ABS Pro ($149/$1490), Smart Pro ($249/$2899), ABS Platinum ($399/$3990) with feature sets from plan admin screenshots
 - Official logo (`public/images/logo.png`) in nav + footer; light cream asset → as-is on dark, `brightness-0` on light (`dark:` restores)
