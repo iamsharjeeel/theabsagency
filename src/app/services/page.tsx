@@ -27,10 +27,10 @@ export default function ServicesPage() {
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <SectionLabel>Services</SectionLabel>
-            <h1 className="heading-display max-w-3xl text-4xl text-foreground md:text-6xl">
+            <h1 className="heading-display max-w-3xl text-[2rem] leading-tight text-foreground sm:text-4xl md:text-6xl">
               End-to-end growth systems
             </h1>
-            <p className="prose-body mt-6 text-base text-on-surface-variant md:text-lg">
+            <p className="prose-body mt-5 text-sm text-on-surface-variant sm:mt-6 sm:text-base md:text-lg">
               Four capabilities we run end-to-end and back with automation. Your
               brand looks expensive. Your calendar fills with the right calls.
             </p>

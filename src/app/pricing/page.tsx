@@ -18,10 +18,10 @@ export default function PricingPage() {
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn className="max-w-3xl">
             <SectionLabel>Pricing</SectionLabel>
-            <h1 className="heading-display text-4xl text-foreground md:text-6xl">
+            <h1 className="heading-display text-[2rem] leading-tight text-foreground sm:text-4xl md:text-6xl">
               Choose the stack that books the call
             </h1>
-            <p className="prose-body mt-6 text-base text-on-surface-variant md:text-lg">
+            <p className="prose-body mt-5 text-sm text-on-surface-variant sm:mt-6 sm:text-base md:text-lg">
               ABS Pro, Smart Pro, and ABS Platinum — priced monthly or yearly.
               Features match your live plan configuration.
             </p>

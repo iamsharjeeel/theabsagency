@@ -4,8 +4,8 @@ import { SITE } from "@/lib/constants";
 
 const LOGO = {
   src: "/images/logo.png",
-  width: 1899,
-  height: 1683,
+  width: 640,
+  height: 567,
 } as const;
 
 type SiteLogoProps = {
@@ -29,8 +29,8 @@ export function SiteLogo({
         width={LOGO.width}
         height={LOGO.height}
         priority={priority}
-        sizes="(max-width: 768px) 120px, 160px"
-        quality={100}
+        sizes="(max-width: 768px) 112px, 144px"
+        quality={90}
         className={cn(
           "h-full w-auto object-contain transition-[filter,opacity] duration-300",
           onDark

@@ -48,7 +48,7 @@ function Block({ block }: { block: LegalBlock }) {
 
 export function LegalDocument({ doc }: { doc: LegalDoc }) {
   return (
-    <article className="mx-auto max-w-3xl px-5 pt-32 pb-24 md:px-8 md:pt-40 md:pb-32">
+    <article className="mx-auto max-w-3xl px-5 pt-28 pb-20 sm:pt-32 md:px-8 md:pt-40 md:pb-32">
       <FadeIn>
         <h1 className="heading-display text-3xl text-foreground md:text-5xl">
           {doc.title}
@@ -65,20 +65,16 @@ export function LegalDocument({ doc }: { doc: LegalDoc }) {
 
       <div className="mt-10 space-y-4 text-sm font-medium leading-relaxed text-on-surface-variant md:text-base">
         {doc.blocks.map((block, i) => (
-          <FadeIn key={i} delay={Math.min(i * 0.02, 0.2)} y={12}>
-            <Block block={block} />
-          </FadeIn>
+          <Block key={i} block={block} />
         ))}
-        <FadeIn y={12}>
-          <p className="pt-6">
-            <Link
-              href="/"
-              className="text-primary underline-offset-2 hover:underline"
-            >
-              Return home
-            </Link>
-          </p>
-        </FadeIn>
+        <p className="pt-6">
+          <Link
+            href="/"
+            className="text-primary underline-offset-2 hover:underline"
+          >
+            Return home
+          </Link>
+        </p>
       </div>
     </article>
   );

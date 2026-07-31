@@ -7,14 +7,14 @@ export function Footer() {
 
   return (
     <footer className="border-t border-outline-variant/50 bg-surface-low">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 pt-16 pb-8 md:grid-cols-3 md:px-8 md:pt-20 md:pb-10">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 pt-14 pb-8 sm:gap-12 md:grid-cols-3 md:px-8 md:pt-20 md:pb-10">
         <div className="space-y-4">
           <Link
             href="/"
             aria-label={`${SITE.name} home`}
-            className="inline-flex h-14 items-center md:h-16"
+            className="inline-flex h-12 items-center md:h-16"
           >
-            <SiteLogo className="h-full max-w-[10rem] md:max-w-[11.5rem]" />
+            <SiteLogo className="h-full max-w-[8.5rem] md:max-w-[11.5rem]" />
           </Link>
           <p className="prose-body max-w-xs text-sm text-on-surface-variant">
             {SITE.tagline} Boutique sales & marketing from Phoenix, AZ.

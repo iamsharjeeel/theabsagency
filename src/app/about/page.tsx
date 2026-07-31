@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
           <FadeIn>
             <SectionLabel>About</SectionLabel>
-            <h1 className="heading-display max-w-3xl text-4xl text-foreground md:text-6xl">
+            <h1 className="heading-display max-w-3xl text-[2rem] leading-tight text-foreground sm:text-4xl md:text-6xl">
               Marketing measured by appointments
             </h1>
           </FadeIn>
@@ -35,8 +35,8 @@ export default function AboutPage() {
                   src="/images/joshua-mayes.jpg"
                   alt={`${SITE.founder}, founder of ${SITE.name}`}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  quality={82}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 520px"
+                  quality={78}
                   className="object-cover"
                   priority
                 />

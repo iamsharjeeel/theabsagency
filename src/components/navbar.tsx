@@ -37,29 +37,29 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 isolate transition-[background-color,border-color,color] duration-300",
+        "fixed inset-x-0 top-0 z-50 isolate pt-[env(safe-area-inset-top)] transition-[background-color,border-color,color] duration-300",
         scrolled || open
-          ? "border-b border-outline-variant/40 bg-background/95"
+          ? "border-b border-outline-variant/40 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80"
           : "border-b border-transparent bg-transparent"
       )}
     >
       <nav
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 md:h-20 md:px-8"
+        className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:px-5 md:h-20 md:gap-4 md:px-8"
         aria-label="Primary"
       >
         <Link
           href="/"
           aria-label="The A.B.S. Agency home"
-          className="inline-flex h-10 items-center md:h-12"
+          className="inline-flex h-9 items-center md:h-12"
         >
           <SiteLogo
             priority
             onDark={overDarkHero}
-            className="h-full max-w-[7.5rem] md:max-w-[9rem]"
+            className="h-full max-w-[6.5rem] sm:max-w-[7.5rem] md:max-w-[9rem]"
           />
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {NAV_LINKS.map((link) => {
             const active =
               link.href === "/"
@@ -130,7 +130,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3 font-heading text-lg font-semibold tracking-[0.04em] text-foreground uppercase"
+                    className="block py-3.5 font-heading text-base font-semibold tracking-tight text-foreground sm:text-lg"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}

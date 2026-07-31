@@ -15,6 +15,16 @@ const poppins = Poppins({
   preload: true,
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbf8f0" },
+    { media: "(prefers-color-scheme: dark)", color: "#16130b" },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {

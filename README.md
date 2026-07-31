@@ -41,9 +41,9 @@ On the home page, nav text is white over the dark hero until scroll; then it swi
 
 ## Assets
 
-- Logo: `public/images/logo.png` (nav + footer; light asset, CSS-adapted for light/dark bg)
-- Founder portrait: `public/images/joshua-mayes.jpg` (About page)
-- Hero: `public/images/hero.jpg` (Home)
+- Logo: `public/images/logo.png` (~71KB; nav + footer; light asset, CSS-adapted for light/dark bg)
+- Founder portrait: `public/images/joshua-mayes.jpg` (~193KB; About)
+- Hero: `public/images/hero.jpg` (~223KB; Home; AVIF/WebP via `next/image`)
 
 Site copy, stats, nav, FAQs, and contact details live in `src/lib/constants.ts`.
 Legal template placeholders (`business name`, email, phone, address, governing law, effective dates) resolve from `SITE`.
