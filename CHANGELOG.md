@@ -2,11 +2,11 @@
 
 ## 2026-07-31
 
+- Poppins display/body font; legal pages `/privacy`, `/terms`, `/sms-terms` from template with dynamic SITE data
+- Scroll/load animations via LazyMotion FadeIn; speed: AVIF/WebP, optimized imports, dynamic contact form
 - Real founder headshot + custom Phoenix hero photography
 - Stats: 133+ appts/mo; sample quote 93%; contact SLA 1 hour
-- Typography: body medium / display bold; removed antialiased thinning
 - Nav: white text over home hero; theme colors after scroll / on light pages
-- About: founder photo at `public/images/joshua-mayes.jpg`
 
 ## 2026-07-29
 

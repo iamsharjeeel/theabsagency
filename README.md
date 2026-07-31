@@ -14,7 +14,7 @@ Boutique marketing site for The A.B.S. Agency (Phoenix, AZ) — Next.js 15, Tail
 - `/` — Home (hero, services, proof, FAQ, CTA)
 - `/about` — Founder story, stats, values
 - `/services` — Service detail + contact form (`#contact`)
-- `/privacy`, `/terms`
+- `/privacy`, `/terms`, `/sms-terms` — legal (content in `src/lib/legal.tsx`, data from `SITE`)
 
 ## Setup
 
@@ -44,3 +44,8 @@ On the home page, nav text is white over the dark hero until scroll; then it swi
 - Hero: `public/images/hero.jpg` (Home)
 
 Site copy, stats, nav, FAQs, and contact details live in `src/lib/constants.ts`.
+Legal template placeholders (`business name`, email, phone, address, governing law, effective dates) resolve from `SITE`.
+
+## Fonts
+
+Poppins via `next/font` for body and display.

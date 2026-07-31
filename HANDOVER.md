@@ -1,25 +1,25 @@
 # Handover — The A.B.S. Agency site
 
-## What changed (clarity + assets pass)
+## What changed
 
-- Nav: white over home hero; theme colors after scroll / light pages
-- Typography: body medium, display bold (700), tighter tracking, dropped antialiased thinning
-- About portrait: real founder headshot at `public/images/joshua-mayes.jpg` (as provided)
-- Hero: custom Phoenix desert-modern photo at `public/images/hero.jpg`
-- Stats: `500+` clients, `133+` appts/mo; sample testimonial uses `93%`
-- Contact SLA: reply within 1 hour
+- Display/body font: **Poppins** (clearer than thin serif caps)
+- Legal pages from Google Doc template → `/privacy`, `/terms`, `/sms-terms`
+  - Dynamic fields: business name, email, phone, address, governing law, effective dates (`SITE` in `constants.ts`)
+  - Full section coverage preserved from the source doc
+- Scroll/load motion: FadeIn (opacity + rise), staggered hero, LazyMotion for smaller JS
+- Speed: AVIF/WebP images, package-import optimize, dynamic ContactForm, dropped Unsplash remote
 
 ## Pending (manual)
 
-- Replace placeholder phone/email/social in `src/lib/constants.ts` (site copy lives here)
+- Replace placeholder phone/email/social/address in `src/lib/constants.ts`
+- Confirm governing law (doc uses Pennsylvania; change `SITE.governingLaw` if needed)
 - Replace sample testimonials with real client quotes
-- Optional: years-active stat if Joshua wants it back
-- Favicon / brand mark beyond wordmark text
+- Legal review of facility/membership template language for agency use
 
-## Files touched
+## Key files
 
-- `src/lib/constants.ts`
-- `src/components/navbar.tsx`, `cta-link.tsx`, `footer.tsx`, `contact-form.tsx`, `ui/button.tsx`
-- `src/components/home/{hero,services-showcase,proof-strip,faq-section}.tsx`
-- `src/app/{globals.css,layout.tsx,about/page.tsx,services/page.tsx,privacy/page.tsx,terms/page.tsx}`
-- `public/images/joshua-mayes.jpg`, `public/images/hero.jpg`
+- `src/lib/constants.ts` — site data
+- `src/lib/legal.tsx` — privacy / terms / sms-terms content
+- `src/components/legal-document.tsx` — legal page renderer
+- `src/components/fade-in.tsx`, `motion-provider.tsx` — animation
+- `public/images/{hero,joshua-mayes}.jpg`
