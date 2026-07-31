@@ -10,22 +10,22 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "rounded-sm bg-cta text-on-cta tracking-[0.18em] uppercase hover:scale-[1.02] hover:brightness-110",
+          "rounded-sm bg-cta text-on-cta tracking-[0.14em] uppercase hover:scale-[1.02] hover:brightness-110",
         outline:
-          "rounded-sm border-outline bg-transparent tracking-[0.18em] uppercase hover:scale-[1.02] hover:border-primary hover:text-primary aria-expanded:bg-muted aria-expanded:text-foreground",
+          "rounded-sm border-outline bg-transparent tracking-[0.14em] uppercase hover:scale-[1.02] hover:border-primary hover:text-primary aria-expanded:bg-muted aria-expanded:text-foreground",
         secondary:
-          "rounded-sm bg-secondary text-secondary-foreground tracking-[0.18em] uppercase hover:scale-[1.02]",
+          "rounded-sm bg-secondary text-secondary-foreground tracking-[0.14em] uppercase hover:scale-[1.02]",
         ghost:
-          "rounded-sm tracking-[0.18em] uppercase hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+          "rounded-sm tracking-[0.14em] uppercase hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
         default:
-          "h-11 gap-1.5 px-6 text-[0.7rem] has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+          "h-11 gap-1.5 px-6 text-[0.75rem] has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         xs: "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm: "h-9 gap-1 rounded-sm px-4 text-[0.65rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
+        sm: "h-9 gap-1 rounded-sm px-4 text-[0.7rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
         lg: "h-12 gap-1.5 px-8 text-xs has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         icon: "size-10",
         "icon-xs":

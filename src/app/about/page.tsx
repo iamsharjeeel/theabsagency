@@ -32,11 +32,12 @@ export default function AboutPage() {
             <div className="bg-surface-container p-3 md:p-4">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
+                  src="/images/joshua-mayes.jpg"
                   alt={`${SITE.founder}, founder of ${SITE.name}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover object-top"
+                  priority
                 />
               </div>
             </div>
@@ -81,7 +82,7 @@ export default function AboutPage() {
               <p className="heading-display text-3xl text-primary md:text-5xl">
                 {stat.value}
               </p>
-              <p className="mt-3 text-xs tracking-[0.15em] text-on-surface-variant uppercase">
+              <p className="mt-3 text-xs font-medium tracking-[0.12em] text-on-surface-variant uppercase">
                 {stat.label}
               </p>
             </FadeIn>
@@ -102,7 +103,7 @@ export default function AboutPage() {
             {VALUES.map((value, i) => (
               <FadeIn key={value.title} delay={0.08 * i}>
                 <p className="label-caps text-primary-fixed-dim">0{i + 1}</p>
-                <h3 className="mt-3 font-heading text-2xl tracking-[0.08em] text-foreground uppercase">
+                <h3 className="mt-3 font-heading text-2xl font-medium tracking-[0.06em] text-foreground uppercase">
                   {value.title}
                 </h3>
                 <p className="prose-body mt-4 text-sm text-on-surface-variant md:text-base">

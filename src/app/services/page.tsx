@@ -35,7 +35,7 @@ export default function ServicesPage() {
               <article className="grid gap-6 border-t border-outline-variant/60 pt-10 lg:grid-cols-[280px_1fr] lg:gap-16">
                 <div>
                   <p className="label-caps text-primary">0{i + 1}</p>
-                  <h2 className="mt-3 font-heading text-2xl tracking-[0.1em] text-foreground uppercase md:text-3xl">
+                  <h2 className="mt-3 font-heading text-2xl font-medium tracking-[0.06em] text-foreground uppercase md:text-3xl">
                     {service.title}
                   </h2>
                 </div>

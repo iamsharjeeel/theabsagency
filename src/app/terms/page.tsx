@@ -13,7 +13,7 @@ export default function TermsPage() {
       <h1 className="heading-display text-3xl text-foreground md:text-4xl">
         Terms of Use
       </h1>
-      <div className="mt-8 space-y-4 text-sm font-light leading-relaxed text-on-surface-variant md:text-base">
+      <div className="mt-8 space-y-4 text-sm font-normal leading-relaxed text-on-surface-variant md:text-base">
         <p>
           By using {SITE.name}&apos;s website, you agree to these terms. Content on
           this site is provided for general informational purposes and does not

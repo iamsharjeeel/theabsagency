@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-outline-variant/50 bg-surface-low">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 pt-16 pb-8 md:grid-cols-3 md:px-8 md:pt-20 md:pb-10">
         <div className="space-y-4">
-          <p className="font-heading text-xs tracking-[0.22em] text-foreground uppercase">
+          <p className="font-heading text-xs font-medium tracking-[0.16em] text-foreground uppercase">
             {SITE.wordmark}
           </p>
           <p className="prose-body max-w-xs text-sm text-on-surface-variant">

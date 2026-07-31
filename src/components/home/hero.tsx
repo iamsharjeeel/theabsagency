@@ -40,7 +40,7 @@ export function Hero() {
           <h1 className="heading-display text-[clamp(2.5rem,8vw,5.75rem)] text-white">
             Precision Growth for Ambitious Brands
           </h1>
-          <p className="mt-7 max-w-[62ch] text-[1.25rem] font-light leading-[1.6] text-white/85 md:mt-8">
+          <p className="mt-7 max-w-[62ch] text-[1.25rem] font-normal leading-[1.65] text-white/90 md:mt-8">
             Lead generation, appointment booking, and revenue systems, handled
             without the agency theater.
           </p>

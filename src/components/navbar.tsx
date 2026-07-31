@@ -13,6 +13,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const overDarkHero = pathname === "/" && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,7 +36,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 isolate transition-[background-color,border-color] duration-300",
+        "fixed inset-x-0 top-0 z-50 isolate transition-[background-color,border-color,color] duration-300",
         scrolled || open
           ? "border-b border-outline-variant/40 bg-background/95"
           : "border-b border-transparent bg-transparent"
@@ -47,7 +48,12 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="font-heading text-[0.7rem] tracking-[0.22em] text-foreground uppercase transition-colors hover:text-primary md:text-xs"
+          className={cn(
+            "font-heading text-[0.75rem] font-medium tracking-[0.16em] uppercase transition-colors md:text-sm",
+            overDarkHero
+              ? "text-white hover:text-white/80"
+              : "text-foreground hover:text-primary"
+          )}
         >
           {SITE.wordmark}
         </Link>
@@ -63,8 +69,14 @@ export function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "label-caps text-on-surface-variant transition-colors hover:text-primary",
-                    active && "text-primary"
+                    "label-caps transition-colors",
+                    overDarkHero
+                      ? active
+                        ? "text-white"
+                        : "text-white/80 hover:text-white"
+                      : active
+                        ? "text-primary"
+                        : "text-foreground/80 hover:text-primary"
                   )}
                 >
                   {link.label}
@@ -75,16 +87,25 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-1 md:gap-3">
-          <ThemeToggle />
+          <ThemeToggle
+            className={
+              overDarkHero
+                ? "text-white hover:text-white/80"
+                : undefined
+            }
+          />
           <Link
             href="/services#contact"
-            className="hidden items-center justify-center bg-cta px-5 py-2.5 text-[0.7rem] tracking-[0.18em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.02] hover:brightness-110 md:inline-flex"
+            className="hidden items-center justify-center bg-cta px-5 py-2.5 text-[0.75rem] font-medium tracking-[0.14em] text-on-cta uppercase transition-all duration-300 hover:scale-[1.02] hover:brightness-110 md:inline-flex"
           >
             Book a Call
           </Link>
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center text-foreground lg:hidden"
+            className={cn(
+              "inline-flex size-10 items-center justify-center lg:hidden",
+              overDarkHero ? "text-white" : "text-foreground"
+            )}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -108,7 +129,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block py-3 font-heading text-lg tracking-[0.12em] text-foreground uppercase"
+                    className="block py-3 font-heading text-lg font-medium tracking-[0.1em] text-foreground uppercase"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
@@ -118,7 +139,7 @@ export function Navbar() {
               <li className="pt-4">
                 <Link
                   href="/services#contact"
-                  className="inline-flex w-full items-center justify-center bg-cta px-5 py-3.5 text-xs tracking-[0.18em] text-on-cta uppercase"
+                  className="inline-flex w-full items-center justify-center bg-cta px-5 py-3.5 text-xs font-medium tracking-[0.14em] text-on-cta uppercase"
                   onClick={() => setOpen(false)}
                 >
                   Book a Call

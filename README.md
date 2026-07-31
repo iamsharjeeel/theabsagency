@@ -35,3 +35,9 @@ Import the repo and deploy. No required env vars for core site.
 ## Theme
 
 Sun/moon toggle in nav. Persists via `next-themes` (`abs-theme`). System preference is the default.
+
+On the home page, nav text is white over the dark hero until scroll; then it switches to theme foreground colors.
+
+## Assets
+
+- Founder portrait: `public/images/joshua-mayes.jpg` (About page)
